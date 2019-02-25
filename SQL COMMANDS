@@ -1,0 +1,32 @@
+SQL CODES
+1. LIMIT
+SELECT * FROM `bigquery-public-data.austin_crime.crime` LIMIT 1000
+2. WHERE
+SELECT * FROM `bigquery-public-data.austin_crime.crime` WHERE clearance_status= &quot;Not
+cleared&quot;
+3. COUNT AND DISTINCT
+SELECT COUNT(DISTINCT(country_name)) FROM `bigquery-public-
+data.world_bank_intl_debt.international_debt`
+4. SELECT
+SELECT * FROM `bigquery-public-
+data.world_bank_health_population.country_series_definitions` WHERE country_code = &quot;FRA&quot;
+5. MAX, GROUP BY AND ORDER BY
+SELECT COUNTRY_NAME, MAX(value) AS MAX_VALUE FROM `bigquery-public-
+data.world_bank_health_population.health_nutrition_population` GROUP BY COUNTRY_NAME
+ORDER BY MAX_VALUE DESC
+6. AND
+SELECT country_name, year FROM `bigquery-public-
+data.world_bank_health_population.health_nutrition_population` WHERE country_name=
+&quot;Tanzania&quot; and year= 2018
+7. AS
+SELECT country_name AS COUNTRY FROM `bigquery-public-
+data.world_bank_health_population.health_nutrition_population`
+AVERAGE
+SELECT AVG(VALUE) FROM `bigquery-public-data.world_bank_wdi.indicators_data`
+Result: 1.1029224360343872E12
+9. MINIMUM
+SELECT MIN(VALUE) FROM `bigquery-public-data.world_bank_wdi.indicators_data`
+Result: -9.82482129757206E15
+10. SUM
+SELECT SUM(VALUE) FROM `bigquery-public-data.world_bank_wdi.indicators_data`
+Result: 8.6152480981819945E18
